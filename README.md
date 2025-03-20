@@ -1,6 +1,7 @@
 # Load Balancer
 
-A simple mock load balancer implemented in **Go** with backend servers running on **Flask**. This setup distributes incoming requests to multiple backend servers in a round-robin fashion, ensuring load distribution and fault tolerance.
+A load balancer is a crucial component in system design that distributes incoming network traffic across multiple servers. Its main purpose is to ensure that no single server is overburdened with too many requests, which helps improve the performance, reliability, and availability of applications. This is a simple mock load balancer implemented in **Go** with backend servers running on **Flask**. This setup distributes incoming requests to multiple backend servers in a round-robin fashion, ensuring load distribution and fault tolerance.
+
 
 ## Features
 - **Round-robin request distribution**
