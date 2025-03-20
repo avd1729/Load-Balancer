@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  server1:
+    build:
+      context: ./server
+    ports:
+      - "5001:5001"
+    command: python server.py 5001
+
+  server2:
+    build:
+      context: ./server
+    ports:
+      - "5002:5002"
+    command: python server.py 5002
+
+  server3:
+    build:
+      context: ./server
+    ports:
+      - "5003:5003"
+    command: python server.py 5003
+
+  load_balancer:
+    build:
+      context: ./load_balancer
+    ports:
+      - "8080:8080"
+    depends_on:
+      - server1
+      - server2
+      - server3
