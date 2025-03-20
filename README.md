@@ -48,17 +48,6 @@ A simple mock load balancer implemented in **Go** with backend servers running o
 - Skips servers that fail health checks (`/status` endpoint)
 - Forwards requests while preserving headers and query parameters
 
-### **Dockerfile for Load Balancer**
-```dockerfile
-FROM golang:1.18-alpine
-WORKDIR /app
-COPY go.mod ./
-RUN go mod download && go mod verify
-COPY load_balancer.go .
-RUN go build -o load_balancer
-EXPOSE 8080
-CMD ["./load_balancer"]
-```
 
 ## Backend Servers (Flask)
 Each backend server is a simple **Flask** application that runs on a different port.
