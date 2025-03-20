@@ -8,9 +8,9 @@ import (
 )
 
 var servers = []string{
-	"http://127.0.0.1:5001",
-	"http://127.0.0.1:5002",
-	"http://127.0.0.1:5003",
+	"http://server1:5001",
+	"http://server2:5002",
+	"http://server3:5003",
 }
 
 var currentIndex int = 0
